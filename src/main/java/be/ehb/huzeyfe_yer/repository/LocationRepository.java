@@ -1,4 +1,7 @@
 package be.ehb.huzeyfe_yer.repository;
 
-public class LocationRepository {
+import be.ehb.huzeyfe_yer.model.Location;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LocationRepository extends JpaRepository<Location, Long> {
 }
