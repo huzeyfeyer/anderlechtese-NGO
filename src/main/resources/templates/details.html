@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+
+
+<header>
+    <h1><a th:href="@{/}">Anderlechtse NGO</a></h1>
+    <nav>
+        <a th:href="@{/new}">Nieuw Evenement</a> |
+        <a th:href="@{/about}">Over Ons</a>
+    </nav>
+</header>
+
+<h2>Details van het evenement</h2>
+
+<div>
+
+    <p><strong>Titel:</strong> <span th:text="${event.title}"></span></p>
+    <p><strong>Omschrijving:</strong> <span th:text="${event.description}"></span></p>
+    <p><strong>Tijdstip:</strong> <span th:text="${event.time}"></span></p>
+    <p><strong>Organisatie:</strong> <span th:text="${event.organization}"></span></p>
+
+    <p><strong>Contact:</strong> <span th:text="${event.email}"></span></p>
+
+    <h3>Locatie</h3>
+
+    <p><strong>Naam:</strong> <span th:text="${event.location.name}"></span></p>
+    <p><strong>Adres:</strong> <span th:text="${event.location.address}"></span></p>
+    <p><strong>Capaciteit:</strong> <span th:text="${event.location.capacity}"></span></p>
+
+</div>
+
+<footer>
+
+    <p>&copy; Anderlechtse NGO - 2025</p>
+
+
+</footer>
+
+</body>
+</html>
