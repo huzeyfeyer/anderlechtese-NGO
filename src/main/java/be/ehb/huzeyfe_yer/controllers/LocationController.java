@@ -1,5 +1,6 @@
 package be.ehb.huzeyfe_yer.controllers;
 
+
 import be.ehb.huzeyfe_yer.model.Location;
 import be.ehb.huzeyfe_yer.service.LocationService;
 import org.springframework.stereotype.Controller;

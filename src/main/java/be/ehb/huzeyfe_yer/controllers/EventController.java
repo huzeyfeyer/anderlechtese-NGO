@@ -42,6 +42,7 @@ public class EventController {
     public String submitForm(@ModelAttribute Event event) {
         eventService.save(event);
         return "redirect:/";
+
     }
 
     // Toont de details van een specifiek evenement
