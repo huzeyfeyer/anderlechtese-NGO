@@ -1,10 +1,41 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>New</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
 </head>
 <body>
-$END$
+
+<h1>Nieuw Evenement Toevoegen</h1>
+
+
+<form action="/new" method="post">
+
+    <label>Titel: <input type="text" name="title" required></label><br>
+    <label>Omschrijving: <textarea name="description" required></textarea></label><br>
+    <label>Tijdstip: <input type="datetime-local" name="time" required></label><br>
+    <label>Organisatie: <input type="text" name="organization" required></label><br>
+    <label>Contact E-mail: <input type="email" name="email" required></label><br>
+
+    <label>Locatie:
+        <select name="location.id">
+
+            <option th:each="locatie : ${locations}"
+                    th:value="${locatie.id}"
+                    th:text="${locatie.name}">
+            </option>
+
+        </select>
+    </label><br>
+
+    <button type="submit">Toevoegen</button>
+
+</form>
+
+<a href="/">Terug naar overzicht</a>
+
+
 </body>
 </html>

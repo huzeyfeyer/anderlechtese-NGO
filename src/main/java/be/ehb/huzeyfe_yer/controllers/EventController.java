@@ -52,4 +52,10 @@ public class EventController {
         return "details";
     }
 
+    @GetMapping("/about")
+    public String showAbout() {
+        return "about";
+    }
+
+
 }

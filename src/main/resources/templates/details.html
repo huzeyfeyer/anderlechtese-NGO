@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Details</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
 </head>
 <body>
 
@@ -28,14 +29,21 @@
     <p><strong>Contact:</strong> <span th:text="${event.email}"></span></p>
 
     <h3>Locatie</h3>
-
-    <p><strong>Naam:</strong> <span th:text="${event.location.name}"></span></p>
-    <p><strong>Adres:</strong> <span th:text="${event.location.address}"></span></p>
-    <p><strong>Capaciteit:</strong> <span th:text="${event.location.capacity}"></span></p>
+    <div th:if="${event.location != null}">
+        <p><strong>Naam:</strong> <span th:text="${event.location.name}"></span></p>
+        <p><strong>Adres:</strong> <span th:text="${event.location.address}"></span></p>
+        <p><strong>Capaciteit:</strong> <span th:text="${event.location.capacity}"></span></p>
+    </div>
+    <div th:unless="${event.location != null}">
+        <p><em>Geen locatie gekoppeld aan dit evenement.</em></p>
+    </div>
 
 </div>
 
 <footer>
+
+    ilgili kisimlari koydum buraya
+
 
     <p>&copy; Anderlechtse NGO - 2025</p>
 
